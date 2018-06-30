@@ -1,1 +1,1 @@
-Name: Leqi Song ONID: songle
+This is my assignment-1 submission!
