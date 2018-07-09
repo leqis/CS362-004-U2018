@@ -1289,7 +1289,7 @@ void playAdventurer(struct gameState *state, int currentPlayer, int *temphand){
 		else{
 			temphand[z]=cardDrawn;
 			state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-			z++;
+			//z++;
 		}
     }
 	while(z-1>=0){
@@ -1338,7 +1338,7 @@ void playSea_hag(struct gameState *state, int currentPlayer){
 int playRemodel(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2){
 	int j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
 	{
 	  return -1;
 	}
