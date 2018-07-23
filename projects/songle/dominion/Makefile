@@ -33,7 +33,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 	
-unittestresult.out: unittest1.c unittest2.c unittest3.c  unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c
+unittestresults: unittest1.c unittest2.c unittest3.c  unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c
 	
 	echo "unittest1.c:" >> unittestresult.out
 	gcc -o unittest1 -g unittest1.c dominion.c rngs.c $(CFLAGS)
