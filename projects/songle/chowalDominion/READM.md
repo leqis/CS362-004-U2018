@@ -1,2 +1,4 @@
-run make all #To compile the dominion code
-run ./playdom 30 # to run playdom code
+songle assignment 5.
+Type "make randomtestresults" to run the random tests
+Type "make unittestresults" to run the unit tests
+Type "make clean" to clean
