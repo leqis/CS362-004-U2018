@@ -1,0 +1,193 @@
+unittest1.c:
+UNIT TEST1: fullDeckCount()
+-Count the card at the beginning of a normally generated game:
+	Both players have 7 coppers: PASSED
+	Both players have 3 estates: PASSED
+	Both players have 0 curse cards: PASSED
+-Set the player's pile as 3 estates + 7 coppers on deck and hand; and 5 smithy and 5 coppers on discard
+	-Count the coppers: PASSED
+	-Count the smithy: PASSED
+-Count coppers from 3 empty piles: PASSED
+File 'unittest1.c'
+Lines executed:90.48% of 42
+Creating 'unittest1.c.gcov'
+
+File 'dominion.c'
+Lines executed:17.35% of 565
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+UNIT TEST 2: isGameOver()
+-When only the Province pile is empty: PASSED
+-When there are 3 empty Kingdom piles: PASSED
+-When there are 2 empty Kingdom piles: PASSED
+-When there is 1 empty Kingdom pile: PASSED
+-When there is 1 empty Kingdom pile and 1 empty Province pile: PASSED
+-When there are no empty piles: PASSED
+File 'unittest2.c'
+Lines executed:97.73% of 44
+Creating 'unittest2.c.gcov'
+
+File 'dominion.c'
+Lines executed:17.52% of 565
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+UNIT TSET 3: gainCard
+-Gain a card from an empty pile: PASSED
+-Gain a card and put it into hand: 
+	The card is in hand: PASSED
+	The supply pile decreased: PASSED
+-Gain a card and put it into deck: 
+	The card is in deck: PASSED
+	The supply pile decreased: PASSED
+-Gain a card and put it into discard: 
+	The card is in discard: PASSED
+	The supply pile decreased: PASSED
+File 'unittest3.c'
+Lines executed:97.44% of 39
+Creating 'unittest3.c.gcov'
+
+File 'dominion.c'
+Lines executed:18.41% of 565
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+UNIT TEST 4: updateCoins()
+-When the player has no Treasure cards nor bonus in hand: PASSED
+-When the hand is filled with gold with no bonus: PASSED
+-When the hand is filled with gold with 1 bonus point: PASSED
+-When the hand has all 3 treasure cards with 1 bonus point: PASSED
+File 'unittest4.c'
+Lines executed:97.73% of 44
+Creating 'unittest4.c.gcov'
+
+File 'dominion.c'
+Lines executed:16.11% of 565
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+CARDTEST1: SMITHY
+-Player gains 3 cards: FAILED
+-Player gains cards from his/her own deck: FAILED
+-No changes in the other player' hand: PASSED
+-No changes in the other player' deck: PASSED
+-No changes in the Province pile: PASSED
+-No changes in the Duchy pile: PASSED
+-No changes in the Estate pile: PASSED
+-No changes in the Kingdowm pile:
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+File 'cardtest1.c'
+Lines executed:97.14% of 35
+Creating 'cardtest1.c.gcov'
+
+File 'dominion.c'
+Lines executed:22.48% of 565
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+CARDTEST2: ADVENTURER
+-Player gained 2 Treasure cards: FAILED
+-Player discards the rest of the revealved cards: FAILED
+-No changes in the other player's hand: PASSED
+-No changes in the other player' deck: PASSED
+-No changes in the Province pile: PASSED
+-No changes in the Duchy pile: PASSED
+-No changes in the Estate pile: PASSED
+-No changes in the Kingdowm pile:
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+File 'cardtest2.c'
+Lines executed:97.67% of 43
+Creating 'cardtest2.c.gcov'
+
+File 'dominion.c'
+Lines executed:19.47% of 565
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+CARDTEST3: GARDENS
+Calculating scores:
+-Player has 10 cards on each pile and 1 Gardens on EACH pile: FAILED
+	Expected score: 9, Actual score: 0, Gardens count: 3
+
+-Player has 10 cards on each pile and 1 Gardens on HAND pile: FAILED
+	Expected score: 3, Actual score: 0, Gardens count: 1
+
+-Player has 10 cards on each pile and 1 Gardens on DECK pile: FAILED
+	Expected score: 3, Actual score: 0, Gardens count: 1
+
+-Player has 10 cards on each pile and 1 Gardens on DISCARD pile: FAILED
+	Expected score: 3, Actual score: 0, Gardens count: 1
+
+-Player has 10 cards on HAND pile with 1 Gardens, other piles have less than 10 in total with no gardens: FAILED
+	Expected score: 1, Actual score: 0, Gardens count: 1
+
+-Player has 10 cards on DECK pile with 1 Gardens, other piles have less than 10 in total with no gardens: FAILED
+	Expected score: 1, Actual score: 0, Gardens count: 1
+
+-Player has 10 cards on DISCARD pile with 1 Gardens, other piles have less than 10 in total with no gardens: FAILED
+	Expected score: 1, Actual score: 0, Gardens count: 1
+
+-Player has less than 10 for each pile, but adding up to >10 and <20, 1 gardens total: FAILED
+	Expected score: 1, Actual score: 0, Gardens count: 1
+
+File 'cardtest3.c'
+Lines executed:99.28% of 139
+Creating 'cardtest3.c.gcov'
+
+File 'dominion.c'
+Lines executed:21.59% of 565
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+CARDTEST4: SEA HAG
+-All other players gain a curse on the deck: FAILED
+	CurseCont: 0, testCurseCount: 0
+-All other players discard a card: PASSED
+-And the discarded card(s) are from the top of their deck: FAILED
+-All other players have the correct deck count: FAILED
+	Original deckCount: 10, test deckCount: 7
+-No changes in the other player's hand: PASSED
+-No chages in the currrent player's hand: PASSED
+-No chages in the currrent player's deck: PASSED
+-No chages in the currrent player's discard: PASSED
+-No changes in the Province pile: PASSED
+-No changes in the Duchy pile: PASSED
+-No changes in the Estate pile: PASSED
+-No changes in the Kingdowm pile:
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+File 'cardtest4.c'
+Lines executed:94.12% of 51
+Creating 'cardtest4.c.gcov'
+
+File 'dominion.c'
+Lines executed:18.41% of 565
+Creating 'dominion.c.gcov'
+
